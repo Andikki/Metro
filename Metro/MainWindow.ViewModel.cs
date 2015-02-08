@@ -65,8 +65,19 @@ namespace Metro
 
         public void SelectStation(Station station)
         {
-            if (DepartureStation == null) { DepartureStation = station; }
-            else { ArrivalStation = station; }
+            if (DepartureStation == null)
+            {
+                DepartureStation = station;
+            }
+            else if (station == DepartureStation || station == ArrivalStation)
+            {
+                DepartureStation = null;
+                ArrivalStation = null;
+            }
+            else
+            {
+                ArrivalStation = station;
+            }
         }
 
         public void CalculateRoute()
