@@ -3,5 +3,5 @@
 
 ТЗ:
 
-![alt text](https://github.com/Andikki/Metro/blob/master/MetroMap.jpg)
+![Схема пив-метро](MetroMap.jpg)
 
