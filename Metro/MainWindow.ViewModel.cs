@@ -101,13 +101,11 @@ namespace Metro
         private void HighlightRoutes(IEnumerable<Route> routes)
         {
             foreach (var routeVM in RouteList.Join(routes, routeVM => routeVM.Route, route => route,
-                (routeVM, route) =>
-                {
-                    routeVM.IsHighlighted = true;
-                    return routeVM;
-                },
+                (routeVM, route) => routeVM,
                 directionlessRouteComparer))
-            { }
+            {
+                routeVM.IsHighlighted = true;
+            }
         }
     }
 }
